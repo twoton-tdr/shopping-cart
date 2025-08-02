@@ -1,0 +1,28 @@
+.home {
+    background-color: aqua;
+}
+.carousel{
+    display: flex;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+.carouselTextBlocks{
+    font-size: 32px;
+    font-weight: 700;
+}
+.slider{
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    
+}
+
+.sliderInside{
+    transform: translateY(-30px) translateX(-30px);
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    background-color: aliceblue;
+}

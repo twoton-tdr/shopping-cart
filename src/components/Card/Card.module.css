@@ -1,0 +1,22 @@
+.cards{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+.card{
+
+    height: 400px;
+    width: 200px;
+    word-wrap: break-word;
+    background-color: rgb(25, 143, 19);
+}
+
+.cardImg{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
