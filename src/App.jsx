@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
   const [cart, setCart] = useState([]);
-  const [itemNo , setItemNo] = useState(0)
+  const [itemNo , setItemNo] = useState(0);
 
   return (
     <div className="main-nav">
@@ -15,7 +15,7 @@ function App() {
           <span className="icon">{itemNo}<span class="mi--shopping-cart"></span></span>
         </div>
       </nav>
-      <Outlet/>
+      <Outlet context={{setCart,setItemNo,cart}} />
     </div>
   )
 }
