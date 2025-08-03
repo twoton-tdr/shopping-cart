@@ -1,6 +1,7 @@
 import App from "./App";
 import Home from "./components/home/Home";
 import Cart from "./components/cart/Cart";
+import Whishlist from "./components/whishlist/Whishlist";
 const routes = [
     {
         path: "/",
@@ -11,6 +12,10 @@ const routes = [
                 path: "cart",
                 element: <Cart />,
             },
+            {
+                path: "whishlist",
+                element: <Whishlist/>,
+            }
         ],
     },
 ];
