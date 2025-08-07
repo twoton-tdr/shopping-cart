@@ -1,28 +1,113 @@
-.home {
-    background-color: aqua;
-}
-.carousel{
+
+.carousel {
     display: flex;
-    height: 600px;
+    background-color: antiquewhite;
     align-items: center;
     justify-content: center;
     gap: 200px;
 }
-.carouselTextBlocks{
+.carouselTextBlocks {
     font-size: 32px;
     font-weight: 700;
+    color: rgba(0, 0, 0, );
 }
-.slider{
-    height: 300px;
-    width: 300px;
-    border: 2px solid black;
+
+
+.link {
+    text-decoration: underline;
+    font-size: 24px;
+    margin-left: 60px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+.sliderInside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 540px;
     
 }
 
-.sliderInside{
-    transform: translateY(-30px) translateX(-30px);
+.sliderInside img{
+    z-index:1;
+    height: 540px;
+    margin-top: -60px;
+}
+
+
+.section{
+    margin: 80px 40px;
+    display: flex;
+    justify-content: space-evenly;
+    
+    flex-wrap: wrap;
+}
+.section .card{
+    width: 400px;
     height: 300px;
-    width: 300px;
-    border: 2px solid black;
-    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.section span{
+    position: absolute;
+    padding: 5px 20px;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    margin-top: -20px;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    color: rgb(99, 98, 98);
+    
+}
+.section .card img{
+    height: 200px;
+    width: 200px;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    height: 200px;
+    background-color: rgb(44, 42, 42);
+}
+.footerCard{
+    padding: 40px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footerCard span .spanChild{
+    font-weight: 200;
+    text-align: center;
+    font-size: 10px;
+}
+.footerCard span .spanHead{
+    padding: 5px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+}
+.footerCard span{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.footerCoName{
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 600;
 }

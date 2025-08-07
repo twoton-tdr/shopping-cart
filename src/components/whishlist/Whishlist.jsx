@@ -4,10 +4,9 @@ import styles from "../Card/Card.module.css";
 
 const Whishlist = () => {
     const { setCart, setItemNo, cart } = useOutletContext();
-    return (
-        
+
+    return cart && cart.length > 0? (
         <ul className={styles.cards}>
-            {console.log(cart)}
             {cart.map((elem) => (
                 <Card
                     key={elem.id}
@@ -18,6 +17,8 @@ const Whishlist = () => {
                 ></Card>
             ))}
         </ul>
+    ) : (
+        <div>Nothing To Display</div>
     );
 };
 

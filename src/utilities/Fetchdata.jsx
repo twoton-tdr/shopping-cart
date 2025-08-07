@@ -16,6 +16,7 @@ function FetchData() {
             .then((response) => setData(response))
             .catch((error)=> setError(error))
             .finally(()=>setLoading(false));
+        
     },[]);
     return {data,error,loading}
 }

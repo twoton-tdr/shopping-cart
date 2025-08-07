@@ -1,22 +1,92 @@
+import FetchData from "../../utilities/Fetchdata";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 const Home = () => {
+    const { data, loading, error } = FetchData();
+    console.log(data);
     return (
         <>
             <div className={styles.home}>
                 <div className={styles.carousel}>
                     <div className={styles.carouselText}>
-                        <div className={styles.carouselTextBlocks}>Find</div>
-                        <div className={styles.carouselTextBlocks} style={{marginLeft:"40px"}}>Your</div>
-                        <div className={styles.carouselTextBlocks} style={{marginLeft:"80px"}}>Next</div>
-                        <div className={styles.carouselTextBlocks} style={{marginLeft:"120px",marginBottom:"60px"}}>Stop</div>
-                        <Link to="/Cart" style={{textDecoration:"none",fontSize:"24px",marginLeft:"60px"}}>Join Now</Link>
+                        <div className={styles.carouselTextBlocks}>Your</div>
+                        <div
+                            className={styles.carouselTextBlocks}
+                            style={{ marginLeft: "40px" }}
+                        >
+                            Style
+                        </div>
+                        <div
+                            className={styles.carouselTextBlocks}
+                            style={{ marginLeft: "80px" }}
+                        >
+                            Our{" "}
+                        </div>
+                        <div
+                            className={styles.carouselTextBlocks}
+                            style={{
+                                marginLeft: "120px",
+                                marginBottom: "40px",
+                            }}
+                        >
+                            Stitch
+                        </div>
+                        <Link to="/Cart" className={styles.link}>
+                            Shop Now
+                        </Link>
                     </div>
                     <div className={styles.slider}>
-                        <div className={styles.sliderInside}></div>
+                        <div className={styles.sliderInside}>
+                            {loading && !error ? (
+                                <p>loading</p>
+                            ) : (
+                                <img src={data[0].image} alt="" />
+                            )}
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.section}>
+                    <div className={styles.card}>
+                        {loading && !error ? (
+                            <p>loading</p>
+                        ) : (
+                            <img src={data[2].image} alt="" />
+                        )}
+                        <span>Sharp & Sophisticated</span>
+                    </div>
+                    <div className={styles.card}>
+                        {loading && !error ? (
+                            <p>loading</p>
+                        ) : (
+                            <img src={data[15].image} alt="" />
+                        )}
+                        <span>Feminine Fair</span>
                     </div>
 
+                    <div className={styles.card}>
+                        {loading && !error ? (
+                            <p>loading</p>
+                        ) : (
+                            <img
+                                src={data[6].image}
+                                alt=""
+                                style={{ height: "100px", width: "100px" }}
+                            />
+                        )}
+                        <span>Luxury & Shine</span>
+                    </div>
                 </div>
+                <footer>
+                    <div className={styles.footerCard}>
+                        <span className={styles.footerCoName}>Stitch</span>
+                    </div>
+
+                    <div className={styles.footerCard}>
+                        <span className={styles.spanChild}>Stitch textiles co.</span>
+                        <span className={styles.spanChild}>©2025</span>
+
+                    </div>
+                </footer>
             </div>
         </>
     );
