@@ -9,9 +9,8 @@
 .carouselTextBlocks {
     font-size: 32px;
     font-weight: 700;
-    color: rgba(0, 0, 0, );
+    color: rgba(0, 0, 0);
 }
-
 
 .link {
     text-decoration: underline;
@@ -29,34 +28,33 @@
     align-items: center;
     justify-content: center;
     height: 540px;
-    
 }
 
-.sliderInside img{
-    z-index:1;
+.sliderInside img {
+    z-index: 1;
     height: 540px;
     margin-top: -60px;
 }
 
-
-.section{
+.section {
     margin: 80px 40px;
     display: flex;
     justify-content: space-evenly;
-    
+
     flex-wrap: wrap;
 }
-.section .card{
+.section .card {
     width: 400px;
     height: 300px;
-    box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    margin: 0px 40px 80px 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
     position: relative;
 }
-.section span{
+.section span {
     position: absolute;
     padding: 5px 20px;
     bottom: 0;
@@ -68,20 +66,19 @@
     font-weight: 600;
     font-style: italic;
     color: rgb(99, 98, 98);
-    
 }
-.section .card img{
+.section .card img {
     height: 200px;
     width: 200px;
 }
-footer{
+footer {
     display: flex;
     justify-content: space-around;
     color: white;
     height: 200px;
     background-color: rgb(44, 42, 42);
 }
-.footerCard{
+.footerCard {
     padding: 40px;
     justify-content: center;
     display: flex;
@@ -89,25 +86,67 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.footerCard span .spanChild{
+.footerCard span .spanChild {
     font-weight: 200;
     text-align: center;
     font-size: 10px;
 }
-.footerCard span .spanHead{
+.footerCard span .spanHead {
     padding: 5px;
     text-align: center;
     padding-top: 20px;
     font-size: 12px;
 }
-.footerCard span{
+.footerCard span {
     display: flex;
     flex-direction: column;
     font-weight: 500;
 }
 
-.footerCoName{
+.footerCoName {
     font-size: 32px;
     font-style: italic;
     font-weight: 600;
+}
+.productCards {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+}
+
+.productCard img {
+    height: 220px;
+    width: 200px;
+    padding: 20px;
+}
+.productCard {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 40px 80px 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    
+}
+.productCard span {
+    width: 200px;
+    font-size: 14px;
+    text-align: center;
+    color: gray;
+}
+
+.productRange{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.ourProductRange{
+    font-size: 24px;
+    font-weight: 600;
+    padding: 40px;
 }

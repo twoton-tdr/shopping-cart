@@ -3,6 +3,11 @@ import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 const Home = () => {
     const { data, loading, error } = FetchData();
+    let items = [];
+
+    if (error) {
+        return <>internal error</>;
+    }
     console.log(data);
     return (
         <>
@@ -47,7 +52,7 @@ const Home = () => {
                 </div>
                 <div className={styles.section}>
                     <div className={styles.card}>
-                        {loading && !error ? (
+                        {loading ? (
                             <p>loading</p>
                         ) : (
                             <img src={data[2].image} alt="" />
@@ -76,15 +81,35 @@ const Home = () => {
                         <span>Luxury & Shine</span>
                     </div>
                 </div>
+                <div className={styles.productRange}>
+                    <span className={styles.ourProductRange}>OUR PRODUCTS</span>
+                    <div className={styles.productCards}>
+                        {loading && !error ? (
+                            <p>loading</p>
+                        ) : (
+                            data.slice(0, 6).map((elem) => {
+                                return (
+                                    <div className={styles.productCard}>
+                                        <img src={elem.image} alt="" />
+                                        <span className={styles.productTitle}>
+                                            {elem.title}
+                                        </span>
+                                    </div>
+                                );
+                            })
+                        )}
+                    </div>
+                </div>
                 <footer>
                     <div className={styles.footerCard}>
                         <span className={styles.footerCoName}>Stitch</span>
                     </div>
 
                     <div className={styles.footerCard}>
-                        <span className={styles.spanChild}>Stitch textiles co.</span>
+                        <span className={styles.spanChild}>
+                            Stitch textiles co.
+                        </span>
                         <span className={styles.spanChild}>©2025</span>
-
                     </div>
                 </footer>
             </div>
