@@ -55,9 +55,6 @@ nav {
     font-size: 32px;
     color: black;
 }
-nav .icons .icon {
-    padding: 20px;
-}
 
 
 .scrolled {
@@ -65,18 +62,15 @@ nav .icons .icon {
     transition: all 1s ease;
 }
 .cartmain {
-    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
     margin-right: 40px;
     color: black;
     font-weight: 600;
+    text-decoration: none;
 }
 .itemno {
     
-    position: absolute;
-    margin: 0;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 16px;
 }
