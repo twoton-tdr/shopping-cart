@@ -9,8 +9,8 @@
 
 .mi--shopping-cart {
     display: inline-block;
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M4.142 4L6.01 16.136A1 1 0 0 0 7.016 17H18a1 1 0 0 0 .958-.713l3-10A1 1 0 0 0 21 5H6.32l-.33-2.138a1 1 0 0 0-.346-.627A1 1 0 0 0 4.984 2H3a1 1 0 1 0 0 2zm3.716 11l-1.23-8h13.028l-2.4 8zM10 20a2 2 0 1 1-4 0a2 2 0 0 1 4 0m9 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0'/%3E%3C/svg%3E");
     background-color: currentColor;
     -webkit-mask-image: var(--svg);
@@ -23,8 +23,8 @@
 
 .mdi--account {
     display: inline-block;
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4'/%3E%3C/svg%3E");
     background-color: currentColor;
     -webkit-mask-image: var(--svg);
@@ -49,18 +49,34 @@ nav {
     flex-direction: row;
 }
 .heading {
+    margin-left: 40px;
     font-weight: 600;
     font-style: italic;
     font-size: 32px;
+    color: black;
 }
 nav .icons .icon {
     padding: 20px;
 }
-nav{
+
+
+.scrolled {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    
+    transition: all 1s ease;
 }
-.nav.scrolled {
-    transition: all 10s ease;
-  
+.cartmain {
+    position: relative;
+    margin-right: 40px;
+    color: black;
+    font-weight: 600;
+}
+.itemno {
+    
+    position: absolute;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
 }

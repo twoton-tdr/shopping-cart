@@ -3,7 +3,6 @@ import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 const Home = () => {
     const { data, loading, error } = FetchData();
-    let items = [];
 
     if (error) {
         return <>internal error</>;
@@ -99,6 +98,7 @@ const Home = () => {
                             })
                         )}
                     </div>
+                    <Link to="/cart" className={styles.viewAll}>VIEW ALL</Link>
                 </div>
                 <footer>
                     <div className={styles.footerCard}>

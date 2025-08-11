@@ -1,24 +1,113 @@
-.cards{
-    padding: 20px;
-    justify-content: center;
+.cards {
+
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    
+    justify-content: center;
+}
+.title{
+    height: 60px;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0px 10px;
+    overflow: hidden;
 }
 
-ul{
+.priceCategory{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.buttons button{
+    width: 100px;
+    padding: 10px;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color:"white";
+    cursor: pointer;
+}
+ul {
     list-style-type: none;
 }
-.card{
-
+.card {
+    width: 400px;
     height: 400px;
-    width: 200px;
-    word-wrap: break-word;
-    background-color: rgb(25, 143, 19);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 20px 80px 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
 }
 
-.cardImg{
+.cardImg {
     height: 200px;
     width: 200px;
     object-fit: contain;
+}
+
+.count{
+    display: flex;
+    justify-content: center;
+}
+.count button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    color: grey;
+    background-color: white;
+}
+
+.ep__remove_filled {
+  display: inline-block;
+  width:24px;
+  height: 24px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='%23000' d='M512 64a448 448 0 1 1 0 896a448 448 0 0 1 0-896M288 512a38.4 38.4 0 0 0 38.4 38.4h371.2a38.4 38.4 0 0 0 0-76.8H326.4A38.4 38.4 0 0 0 288 512'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+.gridicons__add {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+.nothing{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nothing span{
+    font-size: 22px;
+}
+
+.nothing .link{
+    font-size:  22px;
 }

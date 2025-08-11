@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 function App() {
   const [cart, setCart] = useState([]);
   const [itemNo , setItemNo] = useState(0);
+  const [ whishlist, setlist ] = useState([]);
 
   window.addEventListener("scroll",()=>{
     const nav = document.querySelector("nav");
@@ -13,20 +14,20 @@ function App() {
       nav.classList.add("scrolled");
     }
     else{
-      nav.style.zIndex=-1;
+      nav.classList.remove("scrolled");
+      nav.style.zIndex=1;
     }
   })
   return (
     <div className="main-nav">
       <nav>
-        <div className="heading">Stitch</div>
+        <Link to="/" className="heading">Stitch</Link>
         <div className="icons">
-          <span className="icon"><span class="mdi--account"></span></span>
-          <Link to="/whishlist"><span className="icon">{itemNo}<span class="mi--shopping-cart"></span></span></Link>
+          <Link to="/whishlist" className="cartmain"><span className="icon itemno">{itemNo}</span><span class="mi--shopping-cart"></span></Link>
           
         </div>
       </nav>
-      <Outlet context={{setCart,setItemNo,cart}} />
+      <Outlet context={{setCart,setItemNo,cart,whishlist,setlist}} />
     </div>
   )
 }

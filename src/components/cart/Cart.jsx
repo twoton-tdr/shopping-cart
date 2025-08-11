@@ -4,7 +4,7 @@ import Cards from "../Card/Cards"
 const Cart = () => {
     const {data,error,loading} = FetchData();
     const {setCart,setItemNo,cart} = useOutletContext();
-    return <div><Cards data={data} error={error} loading={loading} setItemNo={setItemNo} setCart={setCart} cart={cart}/></div>
+    return <div ><Cards data={data} error={error} loading={loading} setItemNo={setItemNo} setCart={setCart} cart={cart}/></div>
 
 }
 

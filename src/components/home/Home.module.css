@@ -37,7 +37,7 @@
 }
 
 .section {
-    margin: 80px 40px;
+    margin: 80px 40px 0px 40px;
     display: flex;
     justify-content: space-evenly;
 
@@ -149,4 +149,31 @@ footer {
     font-size: 24px;
     font-weight: 600;
     padding: 40px;
+}
+
+.viewAll{
+    margin-top: -40px;
+    background-color: rgb(245, 243, 241);
+    color: rgb(165, 165, 165);
+    padding: 10px 20px;
+    margin-bottom: 80px;
+    text-underline-offset: 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+@media  (max-width:860px) {
+    .carousel{
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+    .sliderInside{
+        height: 340px;
+    }
+    .sliderInside img {
+    z-index: 1;
+    height: 340px;
+
+    margin-top: -60px;
+}
 }
